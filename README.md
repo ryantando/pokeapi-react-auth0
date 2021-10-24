@@ -8,7 +8,22 @@ Use `yarn` to install the project dependencies:
 yarn install
 ```
 
+## Features
+- Backend
+- Auth with auth0
+- Frontend Home get random pokemon
+- Frontend Pokemon detail
+- Frontend Profile
+- Mobile responsive
+
 ## Configuration
+
+### Demo
+[Demo URL](https://d16y4al5cr2osd.cloudfront.net)
+- Demo Backend uses: AWS EC2
+- Demo Frontend uses: AWS S3 and Cloudfront
+
+[Video Preview](https://www.loom.com/share/e6c9f5a6f1c345299d04f0799a1b3aa2)
 
 ### Create an API
 
@@ -16,11 +31,11 @@ For the ["call an API"](https://auth0.com/docs/quickstart/spa/react/02-calling-a
 
 If you do not wish to use an API or observe the API call working, you should not specify the `audience` value in the next step. Otherwise, you will receive a "Service not found" error when trying to authenticate.
 
+
 ### Configure credentials
 
 The project needs to be configured with your Auth0 domain and client ID in order for the authentication flow to work.
-
-To do this, first copy `src/auth_config.json.example` into a new file in the same folder called `src/auth_config.json`, and replace the values with your own Auth0 application credentials, and optionally the base URLs of your application and API:
+Fill `src/auth_config.json` with the values with your own Auth0 application credentials, and optionally the base URLs of your application and API:
 
 ```json
 {
@@ -41,7 +56,7 @@ To do this, first copy `src/auth_config.json.example` into a new file in the sam
 This compiles and serves the React app and starts the backend API server on port 3001.
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 ## Deployment
@@ -49,7 +64,7 @@ npm run dev
 ### Compiles and minifies for production
 
 ```bash
-npm run build
+yarn build
 ```
 
 ### Run your tests
@@ -57,10 +72,6 @@ npm run build
 ```bash
 npm run test
 ```
-
-## Preview
-- Pokeball gif from https://dribbble.com/shots/2832850-Pok-mon-Go
-- [Auth0](https://auth0.com)
 
 
 ## Attribution
