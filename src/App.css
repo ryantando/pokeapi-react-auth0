@@ -1,0 +1,249 @@
+.next-steps .fa-link {
+  margin-right: 5px;
+}
+
+/* Fix for use only flexbox in content area */
+.next-steps .row {
+  margin-bottom: 0;
+}
+
+.next-steps .col-md-5 {
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .next-steps .col-md-5 {
+    margin-bottom: 0;
+  }
+}
+
+.spinner {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.535);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.spinner img {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  width: 50vw;
+  background-color: white;
+}
+
+.result-block-container .result-block {
+  opacity: 1;
+}
+
+
+.logo {
+  background-image: url(./assets/logo.png) !important;
+}
+
+.nav-link {
+  font-size: 1.35rem
+}
+
+.navbar .router-link-exact-active {
+  border-bottom: 5px solid #FF3D00;
+  font-weight: bold;
+}
+
+/************ CONTAINER **********/
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/************* BUTTON ***********/
+
+.random-btn {
+  background-color: #FF3D00;
+  border-radius: 5px;
+  border-width: 0px;
+  padding: 10px 30px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/*********** CARD *************/
+
+.card {
+  box-shadow: 0px 0px 15px 7px rgba(233, 233, 233, 0.5);
+  transition: box-shadow 0.5s ease-in-out;
+  border-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 15px 7px rgba(220, 220, 220, 0.7);
+  border-color: transparent;
+  border-radius: 10px;
+}
+
+.card > p {
+  position: absolute;
+  font-size: 110px;
+  color: #c0c0c052;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+  top: 0px;
+}
+
+.card > h1 {
+  margin-top: -30px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.card > img {
+  width: 300px;
+  height: 250px;
+  min-height: 250px;
+  object-fit: contain;
+  max-width: 98vw;
+  z-index: 1;
+  animation: fadein 0.3s;
+}
+
+.card .types {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.card > .types > p {
+  width: auto;
+  display: inline-block;
+  background-color: #e8ce10;
+  border-radius: 10px;
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+}
+
+/********************* DETAIL *******************/
+
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
+
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  gap: 90px;
+  justify-content: center;
+}
+
+.detail h2 {
+  margin-bottom: 20px;
+}
+
+.detail-right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 50%;
+}
+
+.detail-right-images {
+  min-height: 170px;
+}
+
+.img-sprites {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  animation: fadein 2s;
+}
+
+.detail-right-stats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  animation: fadein 2s;
+  padding-bottom: 50px;
+}
+
+.detail-right-stats-item {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.detail-right-stats-item > p {
+  width: 200px;
+  min-width: 200px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.progress-bar {
+  max-width: 100%;
+  width: 100%;
+  height: 10px;
+  background-color: #e8ce10;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.progress-bar .progress-bar-inner {
+  height: 10px;
+  background-color: #FF3D00;
+  border-radius: 10px;
+  transition: width 2s linear;
+}
+
+.progress-bar .progress-bar-inner:hover {
+  width: 100% !important;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .detail-right-images >div {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .detail-right-stats {
+    width: 90vw;
+  }
+}
