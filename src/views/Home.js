@@ -15,6 +15,7 @@ const Home = () => {
       const random = Math.floor(Math.random() * 200) + 1;
       const token = await getAccessTokenSilently();
       const res = await fetchPokemon(token, random);
+      setLoading(false);
       setData(res.data);
     } catch (error) {
       setLoading(false);
@@ -35,7 +36,7 @@ const Home = () => {
               id={Number(data.id)}
               order={data?.order || 0}
               image={data?.sprites?.front_default || pokeballLoading}
-              name={!loading && data?.name ? data.name : 'Loading...'}
+              name={(!loading && data?.name) ? data.name : 'Loading...'}
               tags={data.types ? data.types.map((a) => (a.type ? a.type.name : '')) : []}
             />
           </>
