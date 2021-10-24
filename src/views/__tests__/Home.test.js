@@ -18,7 +18,7 @@ jest.mock('../../config', () => ({
   getConfig: jest.fn(() => ({
     domain: 'test-domain.com',
     clientId: '123',
-    apiOrigin: 'http://13.212.149.23:5555',
+    apiOrigin: 'https://pokeapi-api.ryantando.com',
     audience: 'test-audience',
   })),
 }));
