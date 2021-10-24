@@ -8,7 +8,7 @@ jobs:
     - name: Install modules
       run: yarn
     - name: Run ESLint
-      run: yarn lint
+      run: yarn run lint
     - name: Run Jest
       run: yarn test
       
