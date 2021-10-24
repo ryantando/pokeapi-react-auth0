@@ -1,8 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true,
-    'jest/globals': true,
+    es6: true
   },
   extends: [
     'plugin:react/recommended',
@@ -25,4 +24,10 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
   },
+  overrides: [
+    {
+      files: ['**/*.test.js'],
+      extends: ['plugin:jest/recommended', 'plugin:jest/style'],
+    },
+  ],
 };

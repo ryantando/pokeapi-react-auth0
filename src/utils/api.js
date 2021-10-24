@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getConfig } from '../config';
 
-const { apiOrigin = 'http://localhost:3001' } = getConfig();
+const { apiOrigin = 'http://13.212.149.23:5555' } = getConfig();
 
 export const fetchPokemon = async (token, id) => {
   const res = await axios.get(`${apiOrigin}/api/pokemon/${id}`, {

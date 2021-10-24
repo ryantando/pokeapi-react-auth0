@@ -85,12 +85,12 @@ const PokemonImages = React.memo(({ sprites }) => {
 
   return (
     <div>
-      {spritesList.map((data, i) => (
+      {spritesList.map((data) => (
         <img
           className="img-sprites"
           src={data.img}
           alt={data}
-          key={i}
+          key={data.img}
         />
       ))}
     </div>
